@@ -18,6 +18,8 @@ include_once 'partials/message.php';
                 <input type="text" name="name" value="<?php echo filter_input(INPUT_GET, 'name'); ?>" required/>
                 <label>E-mail</label>
                 <input type="email" name="email" value="<?php echo filter_input(INPUT_GET, 'email'); ?>" required/>
+                <label>Phone</label>
+                <input type="text" name="phone" required/>
 
                 <button class="btn btn-success text-white" type="submit">Save</button>
             </form>

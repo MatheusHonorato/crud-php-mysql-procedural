@@ -7,6 +7,12 @@
 a {
     text-decoration: none;
 }
+.user-name, .user-email, .user-phone {
+    white-space: nowrap; 
+    max-width: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
 .table-users, .form-div {
     border: solid 1px;
     margin-top: 1%;
@@ -38,7 +44,7 @@ a {
     padding-bottom: 1%;
 }
 .form {
-    width: 600px;
+    width: 290px;
     display: flex;
     flex-direction: column;
 }
