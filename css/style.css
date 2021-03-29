@@ -1,0 +1,80 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000;
+}
+a {
+    text-decoration: none;
+}
+.table-users, .form-div {
+    border: solid 1px;
+    margin-top: 1%;
+    padding: 10px;
+}
+.table-users {
+    width: 100%;
+}
+.form-div {
+    width: 650px;
+    display: flex;
+    justify-content: center;
+}
+.table-users tbody tr th {
+    text-align: left;
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+.flex-center {
+    justify-content: center;
+}
+.container {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+.form {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+}
+.form input {
+    height: 24px;
+    margin-bottom: 10px;
+}
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    border-radius: .25rem;
+}
+.btn-success {
+    background-color: #198754;
+}
+.btn-primary {
+    background-color: #0d6efd;
+}
+.btn-danger {
+    background-color: #dc3545;
+}
+.text-white {
+    color: #FFF;
+}
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+}
