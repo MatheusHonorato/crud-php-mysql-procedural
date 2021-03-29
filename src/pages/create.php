@@ -7,7 +7,7 @@ include_once 'partials/message.php';
 ?>
 <div class="container">
 	<div class="row">
-        <a href="../../index.php"><h1>Users - List</h1></a>
+        <a href="../../index.php"><h1>Users - Create</h1></a>
         <a class="btn btn-success text-white" href="../../index.php">Prev</a>
     </div>
     <div class="row flex-center">
