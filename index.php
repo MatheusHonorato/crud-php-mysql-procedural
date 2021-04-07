@@ -1,2 +1,2 @@
-<?php require 'src/pages/read.php'; ?>
+<?php require_once 'src/pages/read.php'; ?>
 

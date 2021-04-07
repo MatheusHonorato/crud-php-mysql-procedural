@@ -1,8 +1,8 @@
 <?php
 
-require '../../config.php';
-include_once 'partials/header.php';
-include_once 'partials/message.php';
+require_once '../../config.php';
+require_once 'partials/header.php';
+require_once 'partials/message.php';
 
 ?>
 <div class="container">
@@ -25,5 +25,5 @@ include_once 'partials/message.php';
         </div>
     </div>
 </div>
-<?php include_once 'partials/footer.php'; ?>
+<?php require_once 'partials/footer.php'; ?>
 

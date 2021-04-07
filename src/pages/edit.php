@@ -1,8 +1,8 @@
 <?php
 
-require '../../config.php';
-include_once 'partials/header.php';
-include_once 'partials/message.php';
+require_once '../../config.php';
+require_once 'partials/header.php';
+require_once 'partials/message.php';
 
 ?>
 <div class="container">
@@ -19,12 +19,12 @@ include_once 'partials/message.php';
                 <label>E-mail</label>
                 <input type="email" name="email" value="<?php echo filter_input(INPUT_GET, 'email'); ?>" required/>
                 <label>Phone</label>
-                <input type="text" name="phone" required/>
+                <input type="text" name="phone" value="<?php echo filter_input(INPUT_GET, 'phone'); ?>" required/>
 
                 <button class="btn btn-success text-white" type="submit">Save</button>
             </form>
         </div>
     </div>
 </div>
-<?php include_once 'partials/footer.php'; ?>
+<?php require_once 'partials/footer.php'; ?>
 
