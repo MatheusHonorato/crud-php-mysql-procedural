@@ -16,12 +16,12 @@ if($name && $email && $phone) {
         mysqli_query($conn, $sql);
         $conn->close();
 
-        header("Location: ../../index.php");
+        header('Location: ../../index.php');
         exit;
     } else {
         $conn->close();
 
-        header("Location: ../../src/pages/create.php");
+        header('Location: ../../src/pages/create.php');
         exit;
     }
 } else {

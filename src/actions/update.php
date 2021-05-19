@@ -12,9 +12,9 @@ if($id && $name && $email) {
     $result = mysqli_query($conn, $sql);
     $conn->close();
 
-    header("Location: ../../index.php");
+    header('Location: ../../index.php');
 } else {
     $conn->close();
 
-    header("Location: ../../pages/create.php");
+    header('Location: ../../pages/create.php');
 }

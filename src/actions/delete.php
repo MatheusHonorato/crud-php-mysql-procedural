@@ -11,4 +11,4 @@ if($id) {
 
 $conn->close();
 
-header("Location: ../../index.php");
+header('Location: ../../index.php');
