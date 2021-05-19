@@ -2,7 +2,6 @@
 
 require_once '../../config.php';
 require_once 'partials/header.php';
-require_once 'partials/message.php';
 
 ?>
 <div class="container">
@@ -12,7 +11,7 @@ require_once 'partials/message.php';
     </div>
     <div class="row flex-center">
         <div class="form-div">
-            <form class="form" action="../actions/save.php" method="POST">
+            <form class="form" action="../actions/create.php" method="POST">
                 <label>Name</label>
                 <input type="text" name="name" required/>
                 <label>E-mail</label>

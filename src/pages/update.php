@@ -2,7 +2,6 @@
 
 require_once '../../config.php';
 require_once 'partials/header.php';
-require_once 'partials/message.php';
 
 ?>
 <div class="container">
@@ -13,13 +12,13 @@ require_once 'partials/message.php';
     <div class="row flex-center">
         <div class="form-div">
             <form class="form" action="../actions/update.php" method="POST">
-                <input type="hidden" name="id" value="<?php echo filter_input(INPUT_GET, 'id'); ?>" required/>
+                <input type="hidden" name="id" value="<?= htmlspecialchars($_GET['id']); ?>" required/>
                 <label>Name</label>
-                <input type="text" name="name" value="<?php echo filter_input(INPUT_GET, 'name'); ?>" required/>
+                <input type="text" name="name" value="<?= htmlspecialchars($_GET['name']); ?>" required/>
                 <label>E-mail</label>
-                <input type="email" name="email" value="<?php echo filter_input(INPUT_GET, 'email'); ?>" required/>
+                <input type="email" name="email" value="<?= htmlspecialchars($_GET['email']); ?>" required/>
                 <label>Phone</label>
-                <input type="text" name="phone" value="<?php echo filter_input(INPUT_GET, 'phone'); ?>" required/>
+                <input type="text" name="phone" value="<?= htmlspecialchars($_GET['phone']); ?>" required/>
 
                 <button class="btn btn-success text-white" type="submit">Save</button>
             </form>

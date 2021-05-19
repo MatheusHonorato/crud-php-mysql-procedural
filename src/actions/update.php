@@ -2,20 +2,19 @@
 
 require_once '../../config.php';
 
-$id = filter_input(INPUT_POST, 'id');
-$name = filter_input(INPUT_POST, 'name');
-$email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
-$phone = filter_input(INPUT_POST, 'phone');
+$id = mysqli_real_escape_string($conn, $_POST['id']);
+$name = mysqli_real_escape_string($conn, $_POST['name']);
+$email = mysqli_real_escape_string($conn, $_POST['email']);
+$phone = mysqli_real_escape_string($conn, $_POST['phone']);
 
 if($id && $name && $email) {
-    $sql = $pdo->prepare("UPDATE users SET name = :name, email = :email, phone = :phone WHERE id = :id");
-    $sql->bindValue(':name', $name);
-    $sql->bindValue(':email', $email);
-    $sql->bindValue(':phone', $phone);
-    $sql->bindValue(':id', $id);
-    $sql->execute();
+    $sql = "UPDATE users SET name = '$name', email = '$email', phone = '$phone' WHERE id = $id";
+    $result = mysqli_query($conn, $sql);
+    $conn->close();
 
     header("Location: ../../index.php");
 } else {
+    $conn->close();
+
     header("Location: ../../pages/create.php");
 }
