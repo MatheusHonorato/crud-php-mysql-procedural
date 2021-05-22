@@ -1,6 +1,6 @@
 # Crud utilizando php procedural, mysql, e pdo 
 
-CRUD PHP procedural - Exemplo simples de crud em php e mysql utilizando paradigma procedural e pdo.
+CRUD PHP procedural - Exemplo simples de crud em php e mysql utilizando paradigma procedural e mysqli.
 
 Index
 <img src="https://github.com/MatheusHonorato/crud-php-mysql-procedural/blob/main/img/index.png" width="100%">
