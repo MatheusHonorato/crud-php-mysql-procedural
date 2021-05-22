@@ -25,7 +25,7 @@ $users = getUsers($conn);
 			<td class="user-email"><?=htmlspecialchars($row['email']);?></td>
 			<td class="user-phone"><?=htmlspecialchars($row['phone']);?></td>
 			<td>
-				<a class="btn btn-primary text-white" href="src/pages/update.php?id=<?=$row['id'];?>">Edit</a>
+				<a class="btn btn-primary text-white" href="src/pages/edit.php?id=<?=$row['id'];?>">Edit</a>
 			</td>
 			<td>
 				<a class="btn btn-danger text-white" href="src/actions/delete.php?id=<?=$row['id'];?>" onclick="return confirm('Are you sure you want to delete?')">Remove</a>
