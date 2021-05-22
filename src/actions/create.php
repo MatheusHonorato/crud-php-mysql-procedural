@@ -23,7 +23,6 @@ function save($conn, $name, $email, $phone) {
 	$phone = mysqli_real_escape_string($conn,  $phone);
 
 	if($name && $email && $phone) {
-
 		$result_check = verifyEmailUser($conn, $email);
 
 		if($result_check === 0) {
