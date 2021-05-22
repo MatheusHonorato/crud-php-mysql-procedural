@@ -6,7 +6,7 @@ require_once 'partials/header.php';
 ?>
 <div class="container">
 	<div class="row">
-		<a href=""><h1>Users - List</h1></a>
+		<a href=""><h1>Users - Read</h1></a>
 		<a class="btn btn-success text-white" href="src/pages/create.php">New</a>
 	</div>
 

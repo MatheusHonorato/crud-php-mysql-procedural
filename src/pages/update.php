@@ -6,7 +6,7 @@ require_once 'partials/header.php';
 ?>
 <div class="container">
 	<div class="row">
-        <a href="../../index.php"><h1>Users - Edit</h1></a>
+        <a href="../../index.php"><h1>Users - Update</h1></a>
         <a class="btn btn-success text-white" href="../../index.php">Prev</a>
     </div>
     <div class="row flex-center">
