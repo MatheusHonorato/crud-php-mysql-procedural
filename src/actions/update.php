@@ -2,7 +2,7 @@
 
 require_once '../../config.php';
 
-function update($conn, $id) {
+function update($conn) {
     $id = mysqli_real_escape_string($conn, $_POST['id']);
     $name = mysqli_real_escape_string($conn, $_POST['name']);
     $email = mysqli_real_escape_string($conn, $_POST['email']);
@@ -11,6 +11,7 @@ function update($conn, $id) {
     if($id && $name && $email && $phone) {
         $sql = "UPDATE users SET name = ?, email = ?, phone = ? WHERE id = ?";
         $stmt = mysqli_stmt_init($conn);
+
         if(!mysqli_stmt_prepare($stmt, $sql)) {
             echo 'SQL error';
         } else {
@@ -27,4 +28,4 @@ function update($conn, $id) {
     }
 }
 
-update($conn, $id);
+update($conn);

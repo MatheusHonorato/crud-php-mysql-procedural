@@ -6,6 +6,7 @@ function getUser($conn, $id) {
 
     $sql = "SELECT * FROM users  WHERE id = ?";
     $stmt = mysqli_stmt_init($conn);
+
     if(!mysqli_stmt_prepare($stmt, $sql)) {
         echo 'SQL error';
     } else {
@@ -27,7 +28,6 @@ function getUsers($conn) {
     if($result_check > 0) {
         $users = mysqli_fetch_all($result, MYSQLI_ASSOC);
     }
-    
     mysqli_close($conn);
     return $users;
 }

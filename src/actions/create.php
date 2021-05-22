@@ -11,6 +11,7 @@ function save($conn) {
 		$sql = "SELECT * FROM users WHERE email = ?";
 		$stmt = mysqli_stmt_init($conn);
 		$result_check = 0;
+
 		if(!mysqli_stmt_prepare($stmt, $sql)) {
 			echo 'SQL error';
 		} else {
@@ -23,12 +24,14 @@ function save($conn) {
 		if($result_check === 0) {
 			$sql = "INSERT INTO users (name, email, phone) VALUES (?, ?, ?)";
 			$stmt = mysqli_stmt_init($conn);
+
 			if(!mysqli_stmt_prepare($stmt, $sql)) {
 				echo 'SQL error';
 			} else {
 				mysqli_stmt_bind_param($stmt, 'sss', $name, $email, $phone);
 				mysqli_stmt_execute($stmt);
 			}
+
 			mysqli_close($conn);
 			header('Location: ../../index.php');
 			exit;

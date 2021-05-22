@@ -28,7 +28,7 @@ $users = getUsers($conn);
 				<a class="btn btn-primary text-white" href="src/pages/update.php?id=<?=$row['id'];?>">Edit</a>
 			</td>
 			<td>
-				<a class="btn btn-danger text-white" href="src/actions/delete.php?id=<?=$row['id'];?>" onclick="return confirm('Tem certeza que deseja excluir?')">Remove</a>
+				<a class="btn btn-danger text-white" href="src/actions/delete.php?id=<?=$row['id'];?>" onclick="return confirm('Are you sure you want to delete?')">Remove</a>
 			</td>
 		</tr>
 		<?php endforeach; ?>

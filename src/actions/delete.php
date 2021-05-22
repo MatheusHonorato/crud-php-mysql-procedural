@@ -3,11 +3,12 @@
 require_once '../../config.php';
 
 function destroy($conn, $id) {
-    $id = mysqli_real_escape_string($conn, $_GET['id']);
+    $id = mysqli_real_escape_string($conn, $id);
 
     if($id) {
         $sql = "DELETE FROM users WHERE id = ?";
         $stmt = mysqli_stmt_init($conn);
+
         if(!mysqli_stmt_prepare($stmt, $sql)) {
             echo 'SQL error';
         } else {
