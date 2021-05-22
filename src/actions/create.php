@@ -34,13 +34,12 @@ function save($conn, $name, $email, $phone) {
 			
 			mysqli_stmt_bind_param($stmt, 'sss', $name, $email, $phone);
 			mysqli_stmt_execute($stmt);
+
+		} else {
 			mysqli_close($conn);
 
-			header('Location: ../../index.php');
+			header('Location: ../../src/pages/create.php');
 		}
-		mysqli_close($conn);
-
-		header('Location: ../../src/pages/create.php');
 	} 
 	mysqli_close($conn);
 

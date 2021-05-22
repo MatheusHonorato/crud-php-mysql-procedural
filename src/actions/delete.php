@@ -14,8 +14,9 @@ function destroy($conn, $id) {
 
 		mysqli_stmt_bind_param($stmt, 'i', $id);
 		mysqli_stmt_execute($stmt);
-		mysqli_close($conn);
 	}
+	mysqli_close($conn);
+
 	header('Location: ../../index.php');
 }
 
