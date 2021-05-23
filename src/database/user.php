@@ -1,6 +1,6 @@
 <?php
 
-function find($conn, $id) {
+function findUserDb($conn, $id) {
     $id = mysqli_real_escape_string($conn, $id);
 	$user;
 
@@ -19,7 +19,7 @@ function find($conn, $id) {
 	return $user;
 }
 
-function create($conn, $name, $email, $phone) {
+function createUserDb($conn, $name, $email, $phone) {
 	$name = mysqli_real_escape_string($conn, $name);
 	$email = mysqli_real_escape_string($conn,  $email);
 	$phone = mysqli_real_escape_string($conn,  $phone);
@@ -39,7 +39,7 @@ function create($conn, $name, $email, $phone) {
 	return false;
 }
 
-function read($conn) {
+function readUserDb($conn) {
     $users = [];
 
 	$sql = "SELECT * FROM users";
@@ -54,7 +54,7 @@ function read($conn) {
 	return $users;
 }
 
-function update($conn, $id, $name, $email, $phone) {
+function updateUserDb($conn, $id, $name, $email, $phone) {
     if($id && $name && $email && $phone) {
 		$sql = "UPDATE users SET name = ?, email = ?, phone = ? WHERE id = ?";
 		$stmt = mysqli_stmt_init($conn);
@@ -70,7 +70,7 @@ function update($conn, $id, $name, $email, $phone) {
 	return false;
 }
 
-function delete($conn, $id) {
+function deleteUserDb($conn, $id) {
     $id = mysqli_real_escape_string($conn, $id);
 
 	if($id) {
