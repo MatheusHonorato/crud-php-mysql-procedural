@@ -1,6 +1,6 @@
 <?php
 
-require_once '../database/db.php';
+require_once '../../database/user.php';
 
 function findUserAction($conn, $id) {
 	return find($conn, $id);
@@ -8,7 +8,7 @@ function findUserAction($conn, $id) {
 
 function createUserAction($conn, $name, $email, $phone) {
 	create($conn, $name, $email, $phone);
-	return header('location: ../../index.php');
+	return header('location: ../../../index.php');
 }
 
 function readUserAction($conn) {
@@ -17,10 +17,10 @@ function readUserAction($conn) {
 
 function updateUserAction($conn, $id, $name, $email, $phone) {
 	update($conn, $id, $name, $email, $phone);
-	return header('Location: ../../index.php');
+	return header('Location: ../../../index.php');
 }
 
 function deleteUserAction($conn, $id) {
 	delete($conn, $id);
-	return header('Location: ../../index.php');
+	return header('Location: ../../../index.php');
 }

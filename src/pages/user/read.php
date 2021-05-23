@@ -1,8 +1,8 @@
 <?php
 
-require_once '../../config.php';
-require_once '../../src/actions/user.php';
-require_once 'partials/header.php';
+require_once '../../../config.php';
+require_once '../../../src/actions/user.php';
+require_once '../partials/header.php';
 
 $users = readUserAction($conn);
 
@@ -28,7 +28,7 @@ $users = readUserAction($conn);
 				<a class="btn btn-primary text-white" href="./edit.php?id=<?=$row['id']?>">Edit</a>
 			</td>
 			<td>
-				<form action="./delete.php" method="POST">
+				<form action="../user/delete.php" method="POST">
 					<input type="hidden" name="id" value="<?=$row['id']?>">
 					<button class="btn btn-danger text-white" type="submit" onclick="return confirm('Are you sure you want to delete?')">Remove</a>
 				</form>
@@ -37,5 +37,5 @@ $users = readUserAction($conn);
 		<?php endforeach; ?>
 	</table>
 </div>
-<?php require_once 'partials/footer.php'; ?>
+<?php require_once '../partials/footer.php'; ?>
 
