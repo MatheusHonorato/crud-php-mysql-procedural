@@ -28,10 +28,7 @@ $users = readUserAction($conn);
 				<a class="btn btn-primary text-white" href="./edit.php?id=<?=$row['id']?>">Edit</a>
 			</td>
 			<td>
-				<form action="../user/delete.php" method="POST">
-					<input type="hidden" name="id" value="<?=$row['id']?>">
-					<button class="btn btn-danger text-white" type="submit" onclick="return confirm('Are you sure you want to delete?')">Remove</a>
-				</form>
+				<a class="btn btn-danger text-white" href="./delete.php?id=<?=$row['id']?>">Remove</a>
 			</td>
 		</tr>
 		<?php endforeach; ?>
