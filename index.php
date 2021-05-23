@@ -1,2 +1,2 @@
-<?php require_once 'src/pages/read.php'; ?>
+<?php header('location: src/pages/read.php'); ?>
 

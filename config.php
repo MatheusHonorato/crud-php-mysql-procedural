@@ -1,6 +1,6 @@
 <?php
 
-// Sample file: Never send your credentials to github
+// Sample file: Never send your credentials to git
 
 // host
 $host = 'http://localhost/conteudos/crud-php-mysql-procedural/';
