@@ -77,6 +77,12 @@ a {
 .text-white {
     color: #FFF;
 }
+.text-success {
+    color: #198754;
+}
+.text-error {
+    color: #dc3545;
+}
 .footer {
     width: 100%;
     display: flex;

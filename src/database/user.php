@@ -36,7 +36,6 @@ function createUserDb($conn, $name, $email, $phone) {
 		mysqli_close($conn);
 		return true;
 	}
-	return false;
 }
 
 function readUserDb($conn) {
@@ -84,6 +83,4 @@ function deleteUserDb($conn, $id) {
 		mysqli_stmt_execute($stmt);
 		return true;
 	}
-	mysqli_close($conn);
-	return false;
 }
