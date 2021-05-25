@@ -1,20 +1,19 @@
 <?php
 
 require_once '../../database/user.php';
-require_once '../../modules/messages.php';
 
 function findUserAction($conn, $id) {
 	return findUserDb($conn, $id);
+}
+
+function readUserAction($conn) {
+	return readUserDb($conn);
 }
 
 function createUserAction($conn, $name, $email, $phone) {
 	$createUserDb = createUserDb($conn, $name, $email, $phone);
 	$message = $createUserDb == 1 ? 'success-create' : 'error-create';
 	return header("Location: ./read.php?message=$message");
-}
-
-function readUserAction($conn) {
-	return readUserDb($conn);
 }
 
 function updateUserAction($conn, $id, $name, $email, $phone) {

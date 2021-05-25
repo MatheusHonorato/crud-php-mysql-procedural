@@ -63,10 +63,9 @@ function updateUserDb($conn, $id, $name, $email, $phone) {
 
 		mysqli_stmt_bind_param($stmt, 'sssi', $name, $email, $phone, $id);
 		mysqli_stmt_execute($stmt);
+		mysqli_close($conn);
 		return true;
 	}
-	mysqli_close($conn);
-	return false;
 }
 
 function deleteUserDb($conn, $id) {
