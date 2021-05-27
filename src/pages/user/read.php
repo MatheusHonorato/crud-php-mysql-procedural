@@ -2,6 +2,7 @@
 
 require_once '../../../config.php';
 require_once '../../../src/actions/user.php';
+require_once '../../../src/modules/messages.php';
 require_once '../partials/header.php';
 
 $users = readUserAction($conn);
