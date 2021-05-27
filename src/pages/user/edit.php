@@ -18,7 +18,7 @@ $user = findUserAction($conn, $_GET['id']);
     <div class="row flex-center">
         <div class="form-div">
             <form class="form" action="../../pages/user/edit.php" method="POST">
-                <input type="hidden" name="id" value="<?=htmlspecialchars($user['id'])?>" required/>
+                <input type="hidden" name="id" value="<?=$user['id'])?>" required/>
                 <label>Name</label>
                 <input type="text" name="name" value="<?=htmlspecialchars($user['name'])?>" required/>
                 <label>E-mail</label>
