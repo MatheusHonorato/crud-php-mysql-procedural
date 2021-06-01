@@ -4,7 +4,7 @@ require_once '../../../config.php';
 require_once '../../actions/user.php';
 require_once '../partials/header.php';
 
-if(isset($_POST["id"], $_POST["name"]) && isset($_POST["email"]) && isset($_POST["phone"]))
+if (isset($_POST["id"], $_POST["name"]) && isset($_POST["email"]) && isset($_POST["phone"]))
     updateUserAction($conn, $_POST["id"], $_POST["name"], $_POST["email"], $_POST["phone"]);
 
 $user = findUserAction($conn, $_GET['id']);
@@ -18,7 +18,7 @@ $user = findUserAction($conn, $_GET['id']);
     <div class="row flex-center">
         <div class="form-div">
             <form class="form" action="../../pages/user/edit.php" method="POST">
-                <input type="hidden" name="id" value="<?=$user['id'])?>" required/>
+                <input type="hidden" name="id" value="<?=$user['id']?>" required/>
                 <label>Name</label>
                 <input type="text" name="name" value="<?=htmlspecialchars($user['name'])?>" required/>
                 <label>E-mail</label>
