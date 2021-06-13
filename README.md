@@ -1,4 +1,4 @@
-# Crud utilizando php procedural, mysql, e mysqli
+# Crud com PHP e MySQL
 
 ### ⚙️ O que é
 
